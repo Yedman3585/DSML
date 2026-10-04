@@ -1,0 +1,9 @@
+node_modules
+.next
+.env.local
+.npm-cache
+card-preview.svg
+dev-server.log
+dev-server.err
+ngrok*.log
+ngrok*.err
