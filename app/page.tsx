@@ -89,10 +89,10 @@ export default function DemoPage() {
             </div>
           </div>
           <a
-            href="https://github.com/DSML-KZ"
+            href="https://github.com/Yedman3585/DSML"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#8b949e", textDecoration: "none", fontSize: 14, padding: "6px 12px", border: "1px solid #30363d", borderRadius: 6 }}
+            style={{ color: "#c9d1d9", textDecoration: "none", fontSize: 14, fontWeight: 600, padding: "8px 16px", border: "1px solid #8b949e", borderRadius: 6, background: "#21262d" }}
           >
             GitHub ↗
           </a>
@@ -235,7 +235,9 @@ export default function DemoPage() {
                 <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
                   <span style={{ fontSize: 13, color: "#c9d1d9" }}>{badge.label}</span>
                   <button
-                    onClick={() => copyToClipboard(`${baseUrl}${badge.src}`, badge.label)}
+                    onClick={() => copyToClipboard(`<p align="left">
+  <img src="${baseUrl}${badge.src}" />
+</p>`, badge.label)}
                     style={{
                       padding: "4px 10px",
                       background: "transparent",
@@ -246,7 +248,7 @@ export default function DemoPage() {
                       fontSize: 12,
                     }}
                   >
-                    {copied === badge.label ? "Copied!" : "Copy URL"}
+                    {copied === badge.label ? "Copied!" : "Copy HTML"}
                   </button>
                 </div>
               </div>
