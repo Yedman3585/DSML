@@ -33,6 +33,8 @@ const STATIC_BADGES = [
   { src: "/badges/badge_ds.svg", label: "Data Science" },
 ];
 
+const PROD_URL = "https://dsml-card.vercel.app";
+
 /* ── Component ──────────────────────────────────────────────────── */
 
 export default function DemoPage() {
@@ -66,7 +68,7 @@ export default function DemoPage() {
     };
   }, [username, cardType, buildUrl]);
 
-  const embedUrl = username ? buildUrl(username, cardType) : `${baseUrl}/api/card?username=YOUR_USERNAME&type=${cardType}`;
+  const embedUrl = username ? `${PROD_URL}/api/card?username=${username}&type=${cardType}` : `${PROD_URL}/api/card?username=YOUR_USERNAME&type=${cardType}`;
   const markdownCode = `[![DSML GitHub Card](${embedUrl})](https://github.com/${username || "YOUR_USERNAME"})`;
   const htmlCode = `<a href="https://github.com/${username || "YOUR_USERNAME"}"><img src="${embedUrl}" alt="DSML GitHub Card" /></a>`;
 
@@ -236,7 +238,7 @@ export default function DemoPage() {
                   <span style={{ fontSize: 13, color: "#c9d1d9" }}>{badge.label}</span>
                   <button
                     onClick={() => copyToClipboard(`<p align="left">
-  <img src="${baseUrl}${badge.src}" />
+  <img src="${PROD_URL}${badge.src}" />
 </p>`, badge.label)}
                     style={{
                       padding: "4px 10px",
