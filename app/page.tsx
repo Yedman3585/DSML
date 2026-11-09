@@ -28,7 +28,7 @@ const STATIC_BADGES = [
   { src: "/badges/dsmlkz_compact.svg", label: "DSML.KZ Compact" },
   { src: "/badges/dsmlkz_text.svg", label: "DSML.KZ Text" },
   { src: "/badges/badge_dsmlkz.svg", label: "Badge DSML.KZ" },
-  { src: "/badges/badge_dsmlkz_simple.svg", label: "Badge Simple" },
+  { src: "/badges/badge_dsml_young.svg", label: "DSML Young" },
   { src: "/badges/badge_community.svg", label: "Community" },
   { src: "/badges/badge_ds.svg", label: "Data Science" },
 ];
